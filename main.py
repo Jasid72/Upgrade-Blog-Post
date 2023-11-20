@@ -1,4 +1,6 @@
-from flask import Flask, render_template, redirect, url_for
+import random
+
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from wtforms import StringField, SubmitField
@@ -78,7 +80,7 @@ def contact():
 
 @app.route("/createPost")
 def new_post():
-    return render_template("post.html")
+    return render_template("make-post.html")
 
 
 if __name__ == "__main__":
